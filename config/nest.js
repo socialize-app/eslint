@@ -4,8 +4,7 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  plugins: ['@typescript-eslint/eslint-plugin'],
-  extends: ['../base.js','eslint:recommended', 'prettier'],
+  extends: ['../base.js'],
   root: true,
   env: {
     node: true,
@@ -19,5 +18,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     'no-unused-vars': 'off',
+    'no-unresolved': 'off',
+    'prettier/prettier': ['off'],
   },
 };

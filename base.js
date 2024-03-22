@@ -1,28 +1,10 @@
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 2020,
-  },
-  extends: [
-    'airbnb-base',
-    'eslint:recommended',
-    'plugin:prettier/recommended',
-    'plugin:import/recommended',
+  plugins: [
+    '@typescript-eslint/eslint-plugin',
+    'prettier',
   ],
-  env: {
-    es6: true,
-    jest: true,
-    node: true,
-  },
-  rules: {
-    strict: ['error', 'global'],
-    'no-return-await': 'error',
-    'object-shorthand': [
-      'error',
-      'always',
-      { avoidExplicitReturnArrows: true },
-    ],
-    'class-methods-use-this': 'off',
-    'default-param-last': 'warn',
-    'no-template-curly-in-string': 'warn',
-  },
+  extends: [
+    'eslint:recommended',
+    'prettier',
+  ],
 };
