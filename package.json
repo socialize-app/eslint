@@ -1,0 +1,67 @@
+{
+  "name": "@socialize-app/backend-config",
+  "version": "1.0.0",
+  "author": "Uhmpasterig",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "rollup -c --watch",
+    "build": "rimraf dist && tsc && rollup -c rollup.config.js",
+    "lint": "eslint . --ext .ts",
+    "prepare": "rollup -c"
+  },
+  "files": [
+    "dist",
+    "config"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "lint-staged": {
+    "*.{md,css,scss,yaml,yml}": [
+      "prettier --check"
+    ],
+    "*.js": [
+      "eslint"
+    ]
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^7.3.1",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-promise": "^6.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.4.2"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@open-wc/building-rollup": "^3.0.2",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-multi-entry": "^6.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^20.11.29",
+    "deepmerge": "^4.3.1",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.13.0",
+    "rollup-plugin-multi-input": "^1.4.1"
+  }
+}
