@@ -2,21 +2,17 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
   },
-
   extends: [
     'airbnb-base',
-
     'eslint:recommended',
     'plugin:prettier/recommended',
     'plugin:import/recommended',
   ],
-
   env: {
     es6: true,
     jest: true,
     node: true,
   },
-
   rules: {
     strict: ['error', 'global'],
     'no-return-await': 'error',

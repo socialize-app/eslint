@@ -4,7 +4,6 @@
   "author": "Uhmpasterig",
   "description": "",
   "license": "MIT",
-  "private": false,
   "main": "base.js",
   "scripts": {},
   "files": [
