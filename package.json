@@ -1,13 +1,14 @@
 {
-  "name": "@socialize-app/eslint-config",
-  "version": "0.0.8",
+  "name": "@socialize-app/eslint",
+  "version": "0.0.0",
   "author": "Uhmpasterig",
   "description": "",
   "license": "MIT",
   "main": "base.js",
   "scripts": {},
   "files": [
-    "config"
+    "config",
+    "base.js"
   ],
   "lint-staged": {
     "*.{md,css,scss,yaml,yml}": [
