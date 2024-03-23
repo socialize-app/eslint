@@ -9,7 +9,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
   ],
-  globals: [
-    "Proxy"
-  ]
+  globals: {
+    Proxy: 'readonly',
+  },
 };
